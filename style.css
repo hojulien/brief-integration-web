@@ -155,3 +155,45 @@ div:not(.logo) {
     top: 100px;
     gap: 10px;
 }
+
+/* NOS MEILLEURES VENTES */
+
+hr {
+    border: none;
+    height: 9px;
+    width: 150px;
+    background-color: rgba(239, 50, 217, 1);
+}
+
+h2 {
+    font-size: 64px;
+    font-weight: 500;
+    color: rgba(137, 255, 253, 1);
+}
+
+.ventes-produits {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping in case of small screens */
+    gap: 20px; /* Added some spacing between products */
+    width: 100%; /* Ensures the parent container takes full width */
+}
+
+.produits {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 30%;
+}
+
+.description-produits {
+    display: flex;
+    justify-content: space-between;
+}
+
+.prix-produits {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-weight: 700;
+}
