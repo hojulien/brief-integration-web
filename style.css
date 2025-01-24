@@ -13,10 +13,8 @@ body {
 }
 
 section {
-    border: 2px solid black;
     padding: 6px;
     margin: 10px auto;
-    box-sizing: content-box;
 }
 
 div:not(.logo) {
@@ -196,4 +194,54 @@ h2 {
     justify-content: flex-end;
     font-size: 24px;
     font-weight: 700;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+#centerpink {
+    width: 550px;
+    margin: auto;
+}
+
+.white {
+    height: 2px;
+    background-color: rgba(255,255,255,0.2);
+    width: 100%;
+}
+
+.footer-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-ul ul {
+    list-style-type: none;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.box-copyright {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.footer-logos {
+    display: flex; 
+    justify-content: space-between;
+    width: 200px;
+}
+
+.footer-logos img {
+    width: 20px;
+    height: 20px;
 }
