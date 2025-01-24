@@ -172,9 +172,9 @@ h2 {
 .ventes-produits {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow wrapping in case of small screens */
-    gap: 20px; /* Added some spacing between products */
-    width: 100%; /* Ensures the parent container takes full width */
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
 
 .produits {
@@ -194,6 +194,51 @@ h2 {
     justify-content: flex-end;
     font-size: 24px;
     font-weight: 700;
+}
+
+/* COLLECTIONS */
+
+.grid-collections {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+        "b1 b1 b1 b1 b2 b2 b3 b3"
+        "b1 b1 b1 b1 b2 b2 b3 b3"
+        "b1 b1 b1 b1 b6 b6 b3 b3"
+        "b1 b1 b1 b1 b6 b6 b3 b3"
+        "b1 b1 b1 b1 b6 b6 b3 b3"
+        "b4 b4 b4 b5 b5 b5 b3 b3"
+        "b4 b4 b4 b5 b5 b5 b3 b3";
+}
+
+.grid-collections .b1 {
+    grid-area: b1;
+}
+
+.grid-collections .b2 {
+    grid-area: b2;
+}
+
+.grid-collections .b3 {
+    grid-area: b3;
+}
+
+.grid-collections .b4 {
+    grid-area: b4;
+}
+
+.grid-collections .b5 {
+    grid-area: b5;
+}
+
+.grid-collections .b6 {
+    grid-area: b6;
+}
+
+.img-grid {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
 }
 
 /* FOOTER */
