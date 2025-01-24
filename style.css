@@ -5,14 +5,14 @@
 }
 
 body {
-    max-width: 1440px;
+    font-family: "Montserrat";
+    max-width: 1200px;
     background: linear-gradient(rgba(62, 64, 68, 1),rgba(40, 41, 47, 1));
     color: white;
-    margin: 20px 50px;
+    margin: 0 auto;
 }
 
 section {
-    background-color: gray;
     border: 2px solid black;
     padding: 6px;
     margin: 10px auto;
@@ -21,10 +21,11 @@ section {
 
 div:not(.logo) {
     min-height: 20vh;
-    border: 2px solid red;
     padding: 10px;
     margin: 10px auto;
 }
+
+/* HEADER + NAV */
 
 .header {
     padding: 0 40px;
@@ -52,7 +53,105 @@ div:not(.logo) {
     gap: 20px;
 }
 
-p {
-    border: 1px solid black;
-    background-color: skyblue;
+.navbar a {
+    font-size: 18px;
+}
+
+/* ACCUEIL */
+
+.accueil {
+    padding: 0 40px;
+    max-width: 1440px;
+    min-height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.accueil-titre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    max-width: 500px;
+    height: 100%;
+    gap: 10px;
+}
+
+.accueil-titre h1 {
+    color: rgba(137, 255, 253, 1);
+    font-size: 164px;
+    font-weight: 800;
+}
+
+.accueil-titre h2 {
+    font-size: 41px;
+    font-weight: 800;
+}
+
+.accueil-titre p:not(.bouton) {
+    font-size: 24px;
+    max-width: 85%;
+}
+
+.membership {
+    font-weight: 300;
+}
+
+.bouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(239, 50, 217, 1);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    width: 172px;
+    height: 50px;
+    border-radius: 6px;
+    color: white;
+}
+
+.accueil-image {
+    position: absolute;
+    left: 18%;
+    height: 100%;
+}
+
+.accueil-image img {
+    max-width: 100%;
+}
+
+.accueil-autres {
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 6px;
+}
+
+.shoe-box {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    border: 1px solid white;
+    background: radial-gradient(rgba(68, 70, 75, 1), rgba(40, 41, 47, 1));
+}
+
+.shoe-box img {
+    width: 100%;
+    height: auto;
+}
+
+.accueil-logos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 100px;
+    gap: 10px;
 }
