@@ -12,30 +12,20 @@ body {
     margin: 0 auto;
 }
 
-section {
-    padding: 6px;
-    margin: 10px auto;
-}
-
-div:not(.logo) {
-    min-height: 20vh;
-    padding: 10px;
-    margin: 10px auto;
-}
-
 /* HEADER + NAV */
 
-.header {
-    padding: 0 40px;
+header {
     max-width: 1440px;
-    height: 68px;
+    min-height: 68px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background: greenyellow; /* A RETIRER ENSUITE */
 }
 
 .logo {
     padding: 10px;
+    margin-left: 30px;
 }
 
 .logo img {
@@ -43,19 +33,23 @@ div:not(.logo) {
     object-fit: cover;
 }
 
-.navbar {
-    padding: 10px;
+nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     gap: 20px;
+    background: red;
 }
 
-.navbar a {
+nav a {
     font-size: 18px;
 }
 
 /* ACCUEIL */
+
+section {
+    margin: 20px auto;
+}
 
 .accueil {
     padding: 0 40px;
@@ -63,18 +57,19 @@ div:not(.logo) {
     min-height: 600px;
     position: relative;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
+    background: goldenrod;
 }
 
 .accueil-titre {
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    max-width: 500px;
-    height: 100%;
-    gap: 10px;
+    align-items: flex-start;
+    background: skyblue;
+    gap: 20px;
 }
 
 .accueil-titre h1 {
@@ -88,19 +83,50 @@ div:not(.logo) {
     font-weight: 800;
 }
 
-.accueil-titre p:not(.bouton) {
+.accueil-titre p {
     font-size: 24px;
     max-width: 85%;
 }
 
-.membership {
-    font-weight: 300;
+.accueil-image {
+    position: absolute;
+    left: 25%;
+    max-height: 100%;
 }
 
-.bouton {
+.accueil-image img {
+    max-width: none;
+}
+
+.accueil-shoes {
+    position: absolute;
+    right: 5px;
+    bottom: 10%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.shoebox {
+    height: 120px;
+    width: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid white;
+    background: radial-gradient(rgba(68, 70, 75, 1), rgba(40, 41, 47, 1));
+}
+
+.accueil-logos {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 5px;
+    top: 150px;
+    gap: 10px;
+}
+
+button {
     background-color: rgba(239, 50, 217, 1);
     font-size: 18px;
     font-weight: 700;
@@ -108,53 +134,11 @@ div:not(.logo) {
     width: 172px;
     height: 50px;
     border-radius: 6px;
+    border: none;
     color: white;
 }
 
-.accueil-image {
-    position: absolute;
-    left: 18%;
-    height: 100%;
-}
-
-.accueil-image img {
-    max-width: 100%;
-}
-
-.accueil-autres {
-    position: absolute;
-    right: 0;
-    bottom: -10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 6px;
-}
-
-.shoe-box {
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    border: 1px solid white;
-    background: radial-gradient(rgba(68, 70, 75, 1), rgba(40, 41, 47, 1));
-}
-
-.shoe-box img {
-    width: 100%;
-    height: auto;
-}
-
-.accueil-logos {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    right: 0;
-    top: 100px;
-    gap: 10px;
-}
-
-/* NOS MEILLEURES VENTES */
+/* MEILLEURES VENTES */
 
 hr {
     border: none;
@@ -169,124 +153,43 @@ h2 {
     color: rgba(137, 255, 253, 1);
 }
 
-.ventes-produits {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
+.ventes {
+    
 }
 
-.produits {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid white;
-    width: 30%;
+@media (max-width: 600px) {
+
+    /* HEADER + NAV */
+    header {
+        align-items: flex-start;
+    }
+    .logo {
+        margin-top: 12px;
+    }
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* ACCUEIL */
+    .accueil, .accueil-titre, .accueil-image {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .accueil-image img {
+        max-width: 100%;
+        background: red;
+    }
+
+    .accueil-shoes, .accueil-logos {
+        display: none;
+    }
 }
 
-.description-produits {
-    display: flex;
-    justify-content: space-between;
-}
 
-.prix-produits {
-    display: flex;
-    justify-content: flex-end;
-    font-size: 24px;
-    font-weight: 700;
-}
 
-/* COLLECTIONS */
-
-.grid-collections {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-areas: 
-        "b1 b1 b1 b1 b2 b2 b3 b3"
-        "b1 b1 b1 b1 b2 b2 b3 b3"
-        "b1 b1 b1 b1 b6 b6 b3 b3"
-        "b1 b1 b1 b1 b6 b6 b3 b3"
-        "b1 b1 b1 b1 b6 b6 b3 b3"
-        "b4 b4 b4 b5 b5 b5 b3 b3"
-        "b4 b4 b4 b5 b5 b5 b3 b3";
-}
-
-.grid-collections .b1 {
-    grid-area: b1;
-}
-
-.grid-collections .b2 {
-    grid-area: b2;
-}
-
-.grid-collections .b3 {
-    grid-area: b3;
-}
-
-.grid-collections .b4 {
-    grid-area: b4;
-}
-
-.grid-collections .b5 {
-    grid-area: b5;
-}
-
-.grid-collections .b6 {
-    grid-area: b6;
-}
-
-.img-grid {
-    height: 100%;
-    width: 100%;
-    border-radius: 8px;
-}
-
-/* FOOTER */
-
-.footer {
-    display: flex;
-    flex-direction: column;
-}
-
-#centerpink {
-    width: 550px;
-    margin: auto;
-}
-
-.white {
-    height: 2px;
-    background-color: rgba(255,255,255,0.2);
-    width: 100%;
-}
-
-.footer-ul {
-    display: flex;
-    flex-direction: row;
-}
-
-.box-ul ul {
-    list-style-type: none;
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.light {
-    font-weight: 400;
-}
-
-.box-copyright {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-}
-
-.footer-logos {
-    display: flex; 
-    justify-content: space-between;
-    width: 200px;
-}
-
-.footer-logos img {
-    width: 20px;
-    height: 20px;
-}
