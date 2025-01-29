@@ -1,3 +1,6 @@
+/* Les bordures et background-color ne sont qu'à des fins de test.
+   Elles seront retirées à la fin, lorsque le site sera (majoritairement) fonctionnel. */
+
 * {
     margin: 0;
     padding: 0;
@@ -83,6 +86,10 @@ section {
     font-weight: 800;
 }
 
+#membership {
+    font-weight: 300;
+}
+
 .accueil-titre p {
     font-size: 24px;
     max-width: 85%;
@@ -147,14 +154,62 @@ hr {
     background-color: rgba(239, 50, 217, 1);
 }
 
-h2 {
+.ventes h2 {
     font-size: 64px;
     font-weight: 500;
     color: rgba(137, 255, 253, 1);
+    border: 6px solid green;
+    margin-bottom: 40px;
 }
 
 .ventes {
-    
+    padding: 0 40px;
+    max-width: 1440px;
+    min-height: 700px;
+    background: palevioletred;
+    border: 6px solid blue;
+}
+
+.liste {
+    display: flex;
+    border: 6px solid blue;
+}
+
+.produit {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    border: 6px solid red;
+    gap: 10px;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+}
+
+.texte {
+    border: 2px solid yellow;
+}
+
+.prix {
+    font-size: 24px;
+    font-weight: 700;
+    border: 2px solid green;
+}
+
+#blue {
+    color: rgba(137, 255, 253, 1);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#white {
+    font-weight: 400;
+}
+
+#white2 {
+    font-weight: 300;
 }
 
 @media (max-width: 600px) {
@@ -188,6 +243,16 @@ h2 {
 
     .accueil-shoes, .accueil-logos {
         display: none;
+    }
+
+    /* VENTES */
+    .liste {
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .produit {
+        width: auto;
     }
 }
 
